@@ -7,6 +7,7 @@
     <title>Exercício 01</title>
 </head>
 <body>
+    <a href="ex002.php">Exercício 02</a>
     <h1>PHP orientado a objetos</h1>
     <?php
         require_once "Caneta.php";
