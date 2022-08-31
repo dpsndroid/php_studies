@@ -1,12 +1,12 @@
 <?php
 class Caneta {
-    public $modelo;  # qualquer um tem acesso
-    public $cor;     
-    private $ponta;     # só eu tenho acesso
-    protected $carga;       # só o pai e os filhos tem acesso
-    protected $tampada;
+    var $modelo;
+    var $cor;
+    var $ponta;
+    var $carga;
+    var $tampada;
 
-    public function rabiscar() {
+    function rabiscar() {
         if ($this->tampada == true){
             echo "<p>Erro! Não posso rabiscar";
         } else {
@@ -14,10 +14,10 @@ class Caneta {
         }
         
     }
-    public function tampar(){
+    function tampar(){
         $this->tampada = true;
     }
-    public function destampar(){
+    function destampar(){
         $this->destampada = false;
     }
 }
