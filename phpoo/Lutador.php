@@ -12,32 +12,32 @@ class Lutador {
 
     public function apresentar(){
         echo "<p>--------------------------------------</p>";
-        echo "CHEGOU A HORA! O lutador " . $this->getnome();
-        echo ", veio diretamente de " . $this->getnacionalidade();
-        echo "tem " . $this->getidade() . " anos e pesa " . $this->getpeso() . "kg";
-        echo "<br>Ele tem " . $this->getvitorias() . " vitória(s) ";
-        echo $this->getderrotas() . " derrota(s) e " . $this->getempates() . " empate(s)";
+        echo "CHEGOU A HORA! O lutador " . $this->getNome();
+        echo ", veio diretamente de " . $this->getNacionalidade();
+        echo ", tem " . $this->getIdade() . " anos e pesa " . $this->getPeso() . "kg";
+        echo "<br>Ele tem " . $this->getVitorias() . " vitória(s) ";
+        echo $this->getDerrotas() . " derrota(s) e " . $this->getEmpates() . " empate(s)";
 
     }
     
     public function status(){
         echo "<p>----------------------------------</p>";
-        echo $this->getnome() . " é um peso " . $this->getcategoria();
-        echo " e já ganhou " . $this->getvitorias() . " vez(es), ";
-        echo "perdeu " . $this->getderrotas() . " vez(es) e ";
-        echo "empatou " . $this->getempates() . " vez(es)!";
+        echo $this->getNome() . " é um peso " . $this->getCategoria();
+        echo " e já ganhou " . $this->getVitorias() . " vez(es), ";
+        echo "perdeu " . $this->getDerrotas() . " vez(es) e ";
+        echo "empatou " . $this->getEmpates() . " vez(es)!";
     }
 
     public function ganharLuta(){
-        $this->setvitorias($this->getvitorias() + 1);
+        $this->setVitorias($this->getVitorias() + 1);
     }
 
     public function perderLuta(){
-        $this->setderrotas($this->getderrotas() + 1);
+        $this->setDerrotas($this->getDerrotas() + 1);
     }
 
     public function empatarLuta(){
-        $this->setempates($this->getempates() + 1);
+        $this->setEmpates($this->getEmpates() + 1);
     }
 
 // Construtor ------------------------------------
@@ -47,7 +47,7 @@ class Lutador {
         $this->nacionalidade = $na;
         $this->idade = $id;
         $this->altura = $al;
-        $this->setpeso($pe);
+        $this->setPeso($pe);
         $this->vitorias = $vi;
         $this->derrotas = $de;
         $this->empates = $em;
@@ -55,67 +55,67 @@ class Lutador {
 
 // getters ----------------------------------------
 
-    function getnome(){
+    function getNome(){
         return $this->nome;
     }
 
-    function getnacionalidade(){
+    function getNacionalidade(){
         return $this->nacionalidade;
     }
     
-    function getidade(){
+    function getIdade(){
         return $this->idade;
     }
 
-    function getaltura(){
+    function getAltura(){
         return $this->altura;
     }
 
-    function getpeso(){
+    function getPeso(){
         return $this->peso;
     }
 
-    function getcategoria(){
+    function getCategoria(){
         return $this->categoria;
     }
 
 
-    function getvitorias(){
+    function getVitorias(){
         return $this->derrotas;
     }
 
-    function getempates(){
+    function getEmpates(){
         return $this->empates;
     }
 
-    function getderrotas(){
+    function getDerrotas(){
         return $this->derrotas;
     }
 
 // setters ---------------------------------------
 
-    function setnome($nome){
+    function setNome($nome){
         $this->nome = $nome;
     }
 
-    function setnacionalidade($nacionalidade){
+    function setNacionalidade($nacionalidade){
         $this->nacionalidade = $nacionalidade;
     }
 
-    function setidade($idade){
+    function setIdade($idade){
         $this->idade = $idade;
     }
 
-    function setaltura($altura){
+    function setAltura($altura){
         $this->altura = $altura;
     }
 
-    function setpeso($peso){
+    function setPeso($peso){
         $this->peso = $peso;
-        $this->setcategoria();
+        $this->setCategoria();
     }
 
-    private function setcategoria(){
+    private function setCategoria(){
        if ($this->peso < 52.2) {
         $this->categoria = "Inválido";
        } elseif ($this->peso <= 70.3){
@@ -129,15 +129,15 @@ class Lutador {
        }
     }
 
-    function setvitorias($vitorias){
+    function setVitorias($vitorias){
         $this->vitorias = $vitorias;
     }
 
-    function setderrotas($derrotas){
+    function setDerrotas($derrotas){
         $this->derrotas = $derrotas;
     }
 
-    function setempates($empates){
+    function setEmpates($empates){
         $this->empates = $empates;
     }
 
